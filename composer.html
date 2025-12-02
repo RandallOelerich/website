@@ -58,48 +58,6 @@
 
     
         
-        
-        /*!-- movie poster row */
-  .poster-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap;        /* keep them in one row */
-    overflow-x: auto;         /* allows horizontal scroll if needed */
-    padding: 10px 0;
-}
-
-.poster-row img {
-    width: 100%;
-    max-width: 600px;         /* natural desktop size */
-    height: auto;             /* keeps the poster ratio */
-}
-
-/* Tablet (scale posters down) */
-@media (max-width: 1200px) {
-    .poster-row img {
-        max-width: 400px;     /* scales proportionally */
-    }
-}
-
-/* Mobile (scale them further) */
-@media (max-width: 768px) {
-    .poster-row img {
-        max-width: 250px;     /* smaller posters on phones */
-    }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-    .poster-row img {
-        max-width: 180px;
-    }
-}
-        }
-
-
-
-
 
         
 
@@ -182,15 +140,6 @@
         and composed scored cues on Vimeo. Randall also composes sync-licensing music for the Crucial Music platform.
     </p>
 
-    <!-- Movie Poster Images -->
-    <div class="poster-row">
-      <img src="images/Alone.png" alt="Movie 1">
-      <img src="images/GravedifferDavesAnthology.png" alt="Movie 2">
-      <img src="images/LittleThings.png" alt="Movie 3">
-      <img src="images/MarshMallow.png" alt="Movie 4">
-      <img src="images/GravedifferDavesHalfwayHouse.png" alt="Movie 5">
-      <br><br><br>
-    </div>
     
     <!-- SoundCloud Player -->
     <div class="sc-wrapper">
