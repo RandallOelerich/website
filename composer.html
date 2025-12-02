@@ -41,6 +41,7 @@
             font-style: italic;
         }
 
+ 
         /* SoundCloud responsive wrapper */
         .sc-wrapper {
             width: 100%;
@@ -55,23 +56,52 @@
             height: 450px;
         }
 
+    
+        
+        
         /*!-- movie poster row */
-        .poster-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 600px);
-            gap: 20px;
-            justify-content: center;
+  .poster-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;        /* keep them in one row */
+    overflow-x: auto;         /* allows horizontal scroll if needed */
+    padding: 10px 0;
+}
+
+.poster-row img {
+    width: 100%;
+    max-width: 600px;         /* natural desktop size */
+    height: auto;             /* keeps the poster ratio */
+}
+
+/* Tablet (scale posters down) */
+@media (max-width: 1200px) {
+    .poster-row img {
+        max-width: 400px;     /* scales proportionally */
+    }
+}
+
+/* Mobile (scale them further) */
+@media (max-width: 768px) {
+    .poster-row img {
+        max-width: 250px;     /* smaller posters on phones */
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .poster-row img {
+        max-width: 180px;
+    }
+}
         }
 
-       .poster-grid img {
-            width: 600px;
-            height: 880px;
-            object-fit: cover;
-        }
 
-       .poster-row {
-           overflow-x: auto;
-        }
+
+
+
+        
 
         /* Vimeo responsive */
         .video-wrapper {
