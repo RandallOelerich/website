@@ -9,14 +9,38 @@
     <title>Film Music Composer - Randall Oelerich</title>
 
     <style>
-        body {
-            background-color: #030202;  
+        /* Non-scrolling fixed background image */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url("images/bg-dark.jpg");
+            background-size: cover;
+            background-position: top center; /* Ensures top of background shows */
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+
+        /* Semi-transparent overlay for soft darkening */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.45); /* Adjust opacity here */
+            z-index: -1;
+        }
+
+        body {
             color: #dddddd;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 20px;
             line-height: 1.6;
+            background: transparent; /* prevents layered background conflict */
         }
 
         h1 {
@@ -34,15 +58,12 @@
             color: #c0c0c0;
         }
 
-        /* Quote block */
         .quote {
             opacity: 0.85;
             margin-bottom: 25px;
             font-style: italic;
         }
 
- 
-        /* SoundCloud responsive wrapper */
         .sc-wrapper {
             width: 100%;
             max-width: 700px;
@@ -56,18 +77,12 @@
             height: 450px;
         }
 
-    
-        
-
-        
-
-        /* Vimeo responsive */
         .video-wrapper {
             position: relative;
             width: 100%;
             max-width: 900px;
             margin: 40px auto;
-            padding-top: 56.25%; /* 16:9 ratio */
+            padding-top: 56.25%;
         }
 
         .video-wrapper iframe {
@@ -77,21 +92,20 @@
             height: 100%;
         }
 
-       .responsive-video {
-         position: relative;
-         padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-         height: 0;
-         overflow: hidden;
-       }
-     .responsive-video iframe {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-      }   
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
 
-        
+        .responsive-video iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         /* Mobile adjustments */
         @media (max-width: 768px) {
             h1 {
@@ -114,23 +128,28 @@
                 height: 380px;
             }
         }
+
     </style>
 </head>
 
-
 <body>
+
+<!-- Fixed background + overlay -->
+<div class="bg-image"></div>
+<div class="overlay"></div>
+
 
 <div class="container">
 
     <h1>Randall Oelerich - Composer</h1>
     <p align="left"><img src="myemail.png" alt="email contact address"></p>
-  
-    <p><a href="index.html">Home</a> | Composing | <a href="art.html">Art & Photography</a> </p>
+
+    <p><a href="index.html">Home</a> | Composing | <a href="art.html">Art & Photography</a></p>
 
     <div class="quote">
         “Working with Randall was fantastic. He executed a great musical vision that elevated the final film
         to a place I didn’t think it could go!” — 16FeetMedia, Connor Cieko (Director)
-    </div> <!-- quote -->
+    </div>
 
     <p>
         Randall Oelerich is a composer based in Duluth, Minnesota USA (Saint Louis County).
@@ -139,86 +158,39 @@
         <a href="https://open.spotify.com/artist/1H3DfpMWqmr2a1IMunuH7I" target="_blank">Spotify</a>
         and composed scored cues on Vimeo. Randall also composes sync-licensing music for the Crucial Music platform.
     </p>
+
     <div>
-       <p align="center">
-           <img src="images/collage1-posters.png" alt="collage showing scored films" width="50%" height="50%">
-       </p>
+        <p align="center">
+            <img src="images/collage1-posters.png" alt="collage showing scored films" width="50%" height="50%">
+        </p>
     </div>
 
-    
-    <!-- SoundCloud Player -->
+    <!-- SoundCloud -->
     <div class="sc-wrapper">
         <iframe scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2150318675&color=%23141e24&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_teaser=false&show_reposts=false&theme=dark">
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2150318675&color=%23141e24&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_teaser=false&show_reposts=false&theme=dark">
         </iframe>
 
         <div style="font-size: 10px; color: #cccccc;">
             <a href="https://soundcloud.com/randall-oelerich" target="_blank" style="color:#000000; text-decoration:none;">Randall Oelerich</a> ·
             <a href="https://soundcloud.com/randall-oelerich/sets/film-composing" target="_blank" style="color:#aaaaaa; text-decoration:none;">Film Composing</a>
         </div>
-    </div> <!-- wrapper -->
+    </div>
 
-    <!-- responsive iframe video as recommended by chatGPT -->
+    <!-- Vimeo Videos -->
     <div style="max-width: 1152px; margin: 0 auto;">
-    <div style="position: relative; padding-top: 56.25%; height: 0;">
-        <iframe 
-            title="DC Stargirl Scoring Competition"
-            src="https://player.vimeo.com/video/578957111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-        </iframe>       
+        <div style="position: relative; padding-top: 56.25%; height: 0;">
+            <iframe 
+                title="DC Stargirl Scoring Competition"
+                src="https://player.vimeo.com/video/578957111?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            </iframe>
+        </div>
     </div>
-    </div>
-         <br><br>
 
-    <div style="max-width: 1152px; margin: 0 auto;">
-    <div style="position: relative; padding-top: 56.25%; height: 0;">         
-        <iframe 
-            title="Scoring Reel" 
-            src="https://player.vimeo.com/video/496880058?h=4fd35c8e2a"
-            frameborder="0"        
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share; fullscreen"
-            referrerpolicy="strict-origin-when-cross-origin" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-        </iframe>
-    </div>     
-    </div>
-        <br><br>
-  
-    <div style="max-width: 1152px; margin: 0 auto;">
-    <div style="position: relative; padding-top: 56.25%; height: 0;">         
-        <iframe 
-            title="WestWorld Scoring Competition" 
-            src="https://player.vimeo.com/video/1142220004?fl=tl&fe=ec"
-            frameborder="0"        
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share; fullscreen"
-            referrerpolicy="strict-origin-when-cross-origin" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-        </iframe>
-    </div>     
-    </div>
-        
-</div>  <!-- container -->
-</body>
-</html>
+    <br><br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
