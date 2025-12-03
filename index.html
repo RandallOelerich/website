@@ -9,20 +9,29 @@
     <title>Randall Oelerich</title>
 
     <style>
-        body {
-            height: 100vh;
-            width: 100vw;
-            background-color: #030202;  
+        /* Fixed, never-moving background layer */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url("images/bg-dark.jpg");
-            color: #dddddd;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;          
+            z-index: -1; /* always stay behind everything */
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            height: auto;
+            width: 100%;
+            color: #dddddd;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: transparent; /* prevent conflict with fixed background */
         }
 
         h1 {
@@ -40,13 +49,12 @@
             color: #c0c0c0;
         }
 
-        /* Quote block */
         .quote {
             opacity: 0.85;
             margin-bottom: 25px;
             font-style: italic;
         }
-    
+
         /* Mobile adjustments */
         @media (max-width: 768px) {
             h1 {
@@ -68,25 +76,39 @@
     </style>
 </head>
 
-
 <body>
+
+<!-- Fixed background layer -->
+<div class="bg-image"></div>
 
 <div class="container">
     <h1>Randall Oelerich</h1>
     <p align="left"><img src="myemail.png" alt="email contact address"></p>
-    <p> Home | <a href="composer.html">Composing</a> | <a href="art.html">Art and Photography</a> </p>
 
-    <p>Randall Oelerich is a composer, artist, and writer based in Duluth, Minnesota USA (Saint Louis County).  He hikes in the local woods, creates music, markets a novel he wrote under a pen name, and ponders 
-        where to travel for an adventure. To learn more about Randall, click on a link(s) in the menu above. </p>
- 
+    <p> Home | <a href="composer.html">Composing</a> | 
+        <a href="art.html">Art and Photography</a>
+    </p>
+
+    <p>
+        Randall Oelerich is a composer, artist, and writer based in Duluth, Minnesota USA 
+        (Saint Louis County). He hikes in the local woods, creates music, markets a novel 
+        he wrote under a pen name, and ponders where to travel for an adventure. 
+        To learn more about Randall, click on a link(s) in the menu above.
+    </p>
+
     <div>
-      <p align="center"><img src="images/collage1-posters.png" alt="collage showing scored films" width="50%" height="50%"></p>
+        <p align="center">
+            <img src="images/collage1-posters.png" alt="collage showing scored films" width="50%" height="50%">
+        </p>
     </div>
- 
+
     <div>
-      <p align="center"><img src="images/HZS.png" alt="Hans Zimmer Strings" width="50%" height="50%"></p>
+        <p align="center">
+            <img src="images/HZS.png" alt="Hans Zimmer Strings" width="50%" height="50%">
+        </p>
     </div>
-        
+
+</div>
+
 </body>
 </html>
-
