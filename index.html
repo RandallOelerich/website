@@ -9,41 +9,27 @@
     <title>Randall Oelerich</title>
 
     <style>
-        /* Fixed background image */
-        .bg-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("images/bg-dark.jpg");
-            background-size: cover;
-            background-position: top center;  /* <-- ensure top of image is visible */
-            background-repeat: no-repeat;
-            z-index: -2;
-        }
-
-        /* Semi-transparent overlay */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.45); /* adjust transparency here */
-            z-index: -1;
-        }
-
+       /* Fixed full-screen background */
         body {
             margin: 0;
-            padding: 20px;
-            width: 100%;
+            padding: 0;
+            background-image: url("images/bg-dark.jpg");
+            background-size: cover;
+            background-position: top center; /* ensures top of image always visible */
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: #dddddd;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            background: transparent;
         }
 
+         /* Semi-transparent overlay behind all content */
+        .overlay {
+            background: rgba(0, 0, 0, 0.55); /* adjust transparency here */
+            min-height: 100vh;
+            padding: 20px;
+        }
+           
         h1 {
             font-size: 2.2rem;
             margin-bottom: 20px;
@@ -82,9 +68,10 @@
 
 <body>
 
-<!-- Fixed background + overlay -->
+<!-- Fixed background + overlay 
 <div class="bg-image"></div>
 <div class="overlay"></div>
+    -->
 
 <div class="container">
     <h1>Randall Oelerich</h1>
