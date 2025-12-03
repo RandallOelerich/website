@@ -9,7 +9,7 @@
     <title>Randall Oelerich</title>
 
     <style>
-        /* Fixed, never-moving background layer */
+        /* Fixed background image */
         .bg-image {
             position: fixed;
             top: 0;
@@ -18,20 +18,30 @@
             height: 100%;
             background-image: url("images/bg-dark.jpg");
             background-size: cover;
-            background-position: center;
+            background-position: top center;  /* <-- ensure top of image is visible */
             background-repeat: no-repeat;
-            z-index: -1; /* always stay behind everything */
+            z-index: -2;
+        }
+
+        /* Semi-transparent overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.45); /* adjust transparency here */
+            z-index: -1;
         }
 
         body {
             margin: 0;
             padding: 20px;
-            height: auto;
             width: 100%;
             color: #dddddd;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            background: transparent; /* prevent conflict with fixed background */
+            background: transparent;
         }
 
         h1 {
@@ -47,12 +57,6 @@
 
         a {
             color: #c0c0c0;
-        }
-
-        .quote {
-            opacity: 0.85;
-            margin-bottom: 25px;
-            font-style: italic;
         }
 
         /* Mobile adjustments */
@@ -78,15 +82,16 @@
 
 <body>
 
-<!-- Fixed background layer -->
+<!-- Fixed background + overlay -->
 <div class="bg-image"></div>
+<div class="overlay"></div>
 
 <div class="container">
     <h1>Randall Oelerich</h1>
     <p align="left"><img src="myemail.png" alt="email contact address"></p>
 
-    <p> Home | <a href="composer.html">Composing</a> | 
-        <a href="art.html">Art and Photography</a>
+    <p>Home | <a href="composer.html">Composing</a> | 
+       <a href="art.html">Art and Photography</a>
     </p>
 
     <p>
