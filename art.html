@@ -23,17 +23,13 @@
             line-height: 1.6;
         }
 
-       /* Overlay box ONLY behind content */
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px 30px;
-            background: rgba(0, 0, 0, 0.45);   /* semi-transparent overlay */
-            border-radius: 10px;               /* optional: rounded corners */
+        /* Semi-transparent overlay behind all content */
+        .overlay {
+            background: rgba(0, 0, 0, 0.45); /* adjust transparency here */
+            min-height: 100vh;
+            padding: 20px;
         }
 
-
-        
 
         h1 {
             font-size: 2.2rem;
