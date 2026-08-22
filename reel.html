@@ -2,14 +2,19 @@
 <html lang="en">
 
 <head>
+
     <link rel="icon" type="image/x-icon" href="favicon16.png">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="keywords"
-        content="Randall Oelerich, reel, composer, film composer, composing reel, film scoring, television music, Duluth, Minnesota"
+        content="Randall Oelerich, composer, film composer, composing reel, film scoring, television music, Duluth, Minnesota"
     >
 
     <meta name="author" content="Randall Oelerich">
@@ -19,12 +24,13 @@
         content="Film and television composing reel by Duluth, Minnesota composer Randall Oelerich."
     >
 
-    <title>Composing Reel | Randall Oelerich</title>
+    <title>Composing Reel - Randall Oelerich</title>
+
 
     <style>
 
         /* =====================================================
-           PAGE AND BACKGROUND
+           GENERAL PAGE STYLING
            ===================================================== */
 
         * {
@@ -54,88 +60,56 @@
         }
 
 
-        /* Dark overlay over the background image */
+        /* Semi-transparent layer over background image */
 
-        .page-overlay {
+        .overlay {
             min-height: 100vh;
             padding: 20px;
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(0, 0, 0, 0.48),
-                    rgba(0, 0, 0, 0.66)
-                );
+            background: rgba(0, 0, 0, 0.45);
         }
 
 
-        /* Main content width */
+        /* Main content container */
 
         .container {
             width: 100%;
             max-width: 900px;
 
-            margin: 0 auto;
+            margin: auto;
             padding: 0 20px 50px;
         }
 
 
         /* =====================================================
-           HEADER AND NAVIGATION
+           PAGE HEADING AND NAVIGATION
            ===================================================== */
 
         h1 {
             margin-top: 0.67em;
-            margin-bottom: 20px
-            color: #f0f0f0;
+            margin-bottom: 20px;
+
+            color: #eeeeee;
+
             font-size: 2.2rem;
-            font-weight: 600;
+            font-weight: bold;
             line-height: 1.25;
         }
 
-        .subtitle {
-            margin: 0 0 18px;
 
-            color: #b8c0c4;
-
-            font-size: 1.05rem;
-            letter-spacing: 0.04em;
-        }
-
-        nav {
+        .site-navigation {
+            margin-top: 0;
             margin-bottom: 34px;
-            padding: 10px 0;
-
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         }
 
-        nav a,
-        nav span {
-            display: inline-block;
-            margin: 3px 0;
-        }
 
-        nav a {
+        a {
             color: #c0c0c0;
-            text-decoration: none;
-
-            transition: color 0.2s ease;
         }
 
-        nav a:hover {
+
+        a:hover {
             color: #ffffff;
-            text-decoration: underline;
-        }
-
-        nav .current-page {
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .divider {
-            padding: 0 8px;
-            color: #777777;
         }
 
 
@@ -143,28 +117,33 @@
            INTRODUCTION
            ===================================================== */
 
-        .intro {
+        .introduction {
             max-width: 760px;
             margin-bottom: 28px;
         }
 
-        .intro h2 {
-            margin: 0 0 10px;
+
+        .introduction h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
 
             color: #eeeeee;
 
             font-size: 1.45rem;
-            font-weight: 500;
+            font-weight: normal;
         }
 
-        .intro p {
-            margin: 0;
+
+        .introduction p {
+            margin-top: 0;
+            margin-bottom: 0;
+
             color: #d0d0d0;
         }
 
 
         /* =====================================================
-           FEATURED VIDEO
+           VIDEO CARD
            ===================================================== */
 
         .reel-card {
@@ -180,6 +159,9 @@
                 0 0 0 1px rgba(255, 255, 255, 0.02);
         }
 
+
+        /* Responsive 16:9 video area */
+
         .video-wrapper {
             position: relative;
 
@@ -193,6 +175,7 @@
             border-radius: 6px;
         }
 
+
         .video-wrapper iframe {
             position: absolute;
             top: 0;
@@ -204,30 +187,37 @@
             border: 0;
         }
 
+
+        /* Information underneath the video */
+
         .reel-information {
             padding: 17px 5px 4px;
         }
 
+
         .reel-information h2 {
-            margin: 0 0 5px;
+            margin-top: 0;
+            margin-bottom: 5px;
 
             color: #f0f0f0;
 
             font-size: 1.35rem;
-            font-weight: 500;
+            font-weight: normal;
         }
+
 
         .reel-information p {
             margin: 0;
+
             color: #bfc4c7;
         }
 
 
         /* =====================================================
-           LOWER SECTION
+           CONTACT SECTION
            ===================================================== */
 
-        .lower-section {
+        .contact-section {
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 25px;
@@ -242,29 +232,34 @@
             border-radius: 0 7px 7px 0;
         }
 
-        .lower-section h2 {
-            margin: 0 0 5px;
+
+        .contact-section h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
 
             color: #eeeeee;
 
             font-size: 1.25rem;
-            font-weight: 500;
+            font-weight: normal;
         }
 
-        .lower-section p {
+
+        .contact-section p {
             margin: 0;
+
             color: #c7c7c7;
         }
+
 
         .contact-button {
             display: inline-block;
 
             padding: 10px 21px;
 
+            background: rgba(90, 100, 105, 0.5);
+
             border: 1px solid #a6adb1;
             border-radius: 5px;
-
-            background: rgba(90, 100, 105, 0.5);
 
             color: #ffffff;
             text-decoration: none;
@@ -276,9 +271,14 @@
                 transform 0.2s ease;
         }
 
+
         .contact-button:hover {
             background: rgba(125, 135, 140, 0.72);
+
             border-color: #ffffff;
+
+            color: #ffffff;
+
             transform: translateY(-1px);
         }
 
@@ -294,46 +294,50 @@
             border-top: 1px solid rgba(255, 255, 255, 0.12);
 
             color: #999999;
+
             font-size: 0.85rem;
             text-align: center;
         }
 
 
         /* =====================================================
-           TABLETS
+           TABLETS AND SMALL SCREENS
            ===================================================== */
 
         @media (max-width: 768px) {
 
-            .page-overlay {
+            .overlay {
                 padding: 15px;
             }
+
 
             .container {
                 padding: 0 10px 40px;
             }
+
 
             h1 {
                 font-size: 1.8rem;
                 text-align: center;
             }
 
-            .subtitle {
+
+            .site-navigation {
                 text-align: center;
             }
 
-            nav {
-                text-align: center;
-            }
 
             .reel-card {
                 padding: 10px;
             }
 
-            .lower-section {
+
+            .contact-section {
                 grid-template-columns: 1fr;
+
                 text-align: center;
             }
+
 
             .contact-button {
                 justify-self: center;
@@ -352,31 +356,33 @@
                 font-size: 15px;
             }
 
-            .page-overlay {
+
+            .overlay {
                 padding: 12px;
             }
+
 
             .container {
                 padding: 0 4px 35px;
             }
 
-            nav .divider {
-                padding: 0 4px;
-            }
 
-            .intro h2 {
+            .introduction h2 {
                 font-size: 1.3rem;
             }
+
 
             .reel-information {
                 padding: 14px 5px 5px;
             }
 
+
             .reel-information h2 {
                 font-size: 1.2rem;
             }
 
-            .lower-section {
+
+            .contact-section {
                 padding: 19px 16px;
             }
 
@@ -389,56 +395,57 @@
 
 <body>
 
-<div class="page-overlay">
+<div class="overlay">
 
     <main class="container">
 
 
-        <!-- PAGE HEADER -->
+        <!-- =================================================
+             PAGE HEADING
+             ================================================= -->
 
-        <header>
-
-            <h1>Randall Oelerich - Reel</h1>
-
-                <nav aria-label="Main navigation">
-
-                <a href="index.html">Home</a>
-
-                <span class="divider">|</span>
-
-                <a href="composer.html">Composing</a>
-
-                <span class="divider">|</span>
-
-                <span class="current-page">Reel</span>
-
-                <span class="divider">|</span>
-
-                <a href="contact.html">Contact</a>
-
-            </nav>
-
-        </header>
+        <h1>Randall Oelerich - Composing Reel</h1>
 
 
-        <!-- INTRODUCTION -->
+        <!-- =================================================
+             NAVIGATION MENU
+             ================================================= -->
 
-        <section class="intro">
+        <p class="site-navigation">
+
+            <a href="index.html">Home</a> |
+
+            <a href="composer.html">Composing</a> |
+
+            Reel |
+
+            <a href="contact.html">Contact</a>
+
+        </p>
+
+
+        <!-- =================================================
+             INTRODUCTION
+             ================================================= -->
+
+        <section class="introduction">
 
             <h2>Music for Film and Television</h2>
 
             <p>
-                A selection of original film-scoring work demonstrating
-                different musical styles, moods, and approaches to storytelling.
-                Please use headphones or quality speakers for the best listening
-                experience. Most demos are assignments from courses on composing
-                for film and television through Berklee College of Music.
+                This composing reel presents a selection of original
+                film-scoring work demonstrating different musical styles,
+                moods, and approaches to visual storytelling. Please use
+                headphones or quality speakers for the best listening
+                experience.
             </p>
 
         </section>
 
 
-        <!-- VIMEO COMPOSING REEL -->
+        <!-- =================================================
+             VIMEO COMPOSING REEL
+             ================================================= -->
 
         <section class="reel-card" aria-labelledby="reel-title">
 
@@ -455,6 +462,7 @@
 
             </div>
 
+
             <div class="reel-information">
 
                 <h2 id="reel-title">
@@ -470,20 +478,23 @@
         </section>
 
 
-        <!-- CONTACT INVITATION -->
+        <!-- =================================================
+             CONTACT INVITATION
+             ================================================= -->
 
-        <section class="lower-section">
+        <section class="contact-section">
 
             <div>
 
                 <h2>Looking for music for your project?</h2>
 
                 <p>
-                    I am interested in original music for my film
-                    or television project.
+                    I am interested in composing original music for film,
+                    television, and other visual media.
                 </p>
 
             </div>
+
 
             <a class="contact-button" href="contact.html">
                 Contact Randall
@@ -492,7 +503,9 @@
         </section>
 
 
-        <!-- FOOTER -->
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
 
         <footer>
             &copy; 2026 Randall Oelerich. All rights reserved.
