@@ -30,6 +30,74 @@
     <style>
 
         /* =====================================================
+   STICKY PAGE HEADER AND MENU
+   ===================================================== */
+
+.site-header {
+    
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+
+    margin: 0 -20px 30px;
+    padding: 20px 20px 13px;
+
+    background: rgba(10, 13, 15, 0.88);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.30);
+
+    /* Slightly blurs the page behind the header */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+/* Covers the space above the sticky header */
+
+.site-header::before {
+    content: "";
+
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background: rgba(10, 13, 15, 0.88);
+
+    pointer-events: none;
+}
+
+.site-header h1 {
+    margin: 0 0 10px;
+}
+
+.site-header .site-navigation {
+    margin: 0;
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        top: 15px;
+        margin-right: -10px;
+        margin-left: -10px;
+        padding: 15px 10px 12px;
+    }
+   .site-header::before {
+        top: -15px;
+        height: 15px;
+    }
+    
+
+}
+
+        /* =====================================================
            GENERAL PAGE STYLING
            ===================================================== */
 
@@ -85,6 +153,7 @@
            PAGE HEADING AND NAVIGATION
            ===================================================== */
 
+        
         h1 {
             margin-top: 0.67em;
             margin-bottom: 20px;
@@ -404,6 +473,7 @@
              PAGE HEADING
              ================================================= -->
 
+      <header class="site-header">
         <h1>Randall Oelerich</h1>
 
 
@@ -422,6 +492,8 @@
             <a href="contact.html">Contact</a>
 
         </p>
+      </header>
+        
 
 
         <!-- =================================================
