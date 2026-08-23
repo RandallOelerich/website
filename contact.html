@@ -11,6 +11,47 @@
     <title>Randall Oelerich Contact</title>
 
     <style>
+
+/* =====================================================
+        DISABLE SCROLLING EXCEPT ON SCREENS TOO SMALL
+   ==================================================== */
+
+/* Disable scrolling on sufficiently large screens */
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* Allow scrolling when necessary */
+
+@media (max-width: 768px), (max-height: 750px) {
+
+    html,
+    body {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    .overlay {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+}
+
+
+        
     /* =====================================================
        STICKY PAGE HEADER AND MENU
       ===================================================== */
