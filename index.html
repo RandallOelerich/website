@@ -146,6 +146,176 @@
                 font-size: 15px;
             }
         }
+
+ /* =====================================================
+   FEATURED CUE
+   ===================================================== */
+
+.featured-cue {
+    max-width: 800px;
+
+    margin: 38px auto;
+    padding: 16px;
+
+    background: rgba(10, 13, 15, 0.68);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.38);
+}
+
+
+/* Responsive 16:9 video */
+
+.featured-cue-video {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #000000;
+
+    border-radius: 6px;
+}
+
+
+.featured-cue-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* Information underneath video */
+
+.featured-cue-information {
+    padding: 17px 6px 5px;
+}
+
+
+.featured-cue-label {
+    margin: 0 0 4px;
+
+    color: #aeb8bd;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+.featured-cue-information h2 {
+    margin: 0 0 8px;
+
+    color: #eeeeee;
+
+    font-size: 1.35rem;
+    font-weight: normal;
+}
+
+
+.featured-cue-description {
+    margin: 0 0 17px;
+
+    color: #cccccc;
+}
+
+
+/* Buttons */
+
+.featured-cue-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.featured-cue-button {
+    display: inline-block;
+
+    padding: 9px 17px;
+
+    background: rgba(90, 100, 105, 0.55);
+
+    border: 1px solid #949da2;
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.featured-cue-button:hover {
+    background: rgba(125, 135, 140, 0.75);
+
+    border-color: #ffffff;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+.featured-cue-button.secondary {
+    background: rgba(25, 30, 33, 0.55);
+}
+
+
+/* Small explanatory note */
+
+.featured-cue-note {
+    margin: 16px 0 0;
+
+    color: #999999;
+
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 600px) {
+
+    .featured-cue {
+        margin: 28px auto;
+        padding: 10px;
+    }
+
+    .featured-cue-information {
+        padding: 14px 5px 5px;
+    }
+
+    .featured-cue-information h2 {
+        font-size: 1.2rem;
+    }
+
+    .featured-cue-links {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .featured-cue-button {
+        text-align: center;
+    }
+
+}
+        
     </style>
 </head>
 
@@ -172,6 +342,77 @@
         To learn more about Randall, click on a link(s) in the menu above.
     </p>
 
+<!-- =====================================================
+     FEATURED CUE
+     ===================================================== -->
+
+<section class="featured-cue" aria-labelledby="featured-cue-title">
+
+
+    <!-- VIMEO VIDEO -->
+
+    <div class="featured-cue-video">
+
+        <iframe
+            src="https://player.vimeo.com/video/1219997526?title=0&byline=0&portrait=0"
+            title="Featured film-scoring cue by Randall Oelerich"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <!-- CUE INFORMATION -->
+
+    <div class="featured-cue-information">
+
+        <p class="featured-cue-label">
+            Featured Cue
+        </p>
+
+        <h2 id="featured-cue-title">
+            Horror Scene Rescore
+        </h2>
+
+        <p class="featured-cue-description">
+            An original musical score composed to support the scene’s
+            suspense, atmosphere, and escalating sense of dread.
+        </p>
+
+
+        <!-- LINKS -->
+
+        <div class="featured-cue-links">
+
+            <a
+                class="featured-cue-button"
+                href="reel.html"
+            >
+                Watch My Composing Reel
+            </a>
+
+            <a
+                class="featured-cue-button secondary"
+                href="composer.html"
+            >
+                Explore More Music
+            </a>
+
+        </div>
+
+
+        <p class="featured-cue-note">
+            Music composed by Randall Oelerich. This video is presented
+            as a film-scoring demonstration.
+        </p>
+
+    </div>
+
+</section>
+      
     <div>
         <p align="center">
             <img src="images/collage1-posters.png" alt="collage showing scored films" width="50%" height="50%">
