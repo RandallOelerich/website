@@ -11,6 +11,23 @@
 
     <style>
 
+    .soundcloud-frame {
+    width: 100%;
+    height: 450px;
+
+    overflow: hidden;
+
+    background: #000000;
+}
+
+   .soundcloud-frame iframe {
+    display: block;
+    width: 100%;
+    height: 453px;
+    margin-top: -3px;
+    border: 0;
+}
+
 /* =====================================================
    STICKY PAGE HEADER AND MENU
    ===================================================== */
@@ -243,8 +260,7 @@
       </div>-->
 
     <!-- SoundCloud -->
-    <div class="sc-wrapper">
-
+  <div class="soundcloud-frame">
         <iframe
            width="100%"
            height="450"
@@ -255,6 +271,7 @@
            title="Randall Oelerich Audio Compositions"
            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2150318675&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true">
        </iframe>
+  </div>
         
 
         <!--
