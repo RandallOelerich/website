@@ -151,7 +151,70 @@
             }
         }
 
-     </style>
+
+/* Album covers */
+
+.album-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.album-section h2 {
+    color: #d0d0d0;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+.album-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.album {
+    width: 260px;
+}
+
+.album a {
+    display: block;
+    text-decoration: none;
+}
+
+.album img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.album a:hover img,
+.album a:focus img {
+    transform: scale(1.04);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.85);
+}
+
+.album-title {
+    margin-top: 10px;
+    color: #d0d0d0;
+    font-size: 1.05rem;
+}
+
+.album-service {
+    margin-top: 0;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .album {
+        width: min(260px, 85vw);
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -177,6 +240,41 @@
         about Randall, click on the link in the menu above.
     </p>
 
+      <section class="album-section">
+    <h2>Music on Spotify</h2>
+
+    <div class="album-grid">
+
+        <div class="album">
+            <a href="https://open.spotify.com/album/1tCjPOxazCQwRnvsItttJV"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Listen to Alone on Spotify">
+
+                <img src="images/alone.jpg"
+                     alt="Album cover for Alone by Randall Oelerich">
+
+                <div class="album-title">Alone</div>
+                <div class="album-service">Listen on Spotify</div>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="https://open.spotify.com/album/5N1JxUw5t0MIn4N3aQxkXH"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Listen to Lonesome Horizon on Spotify">
+
+                <img src="images/lonesome-horizon.jpg"
+                     alt="Album cover for Lonesome Horizon by Randall Oelerich">
+
+                <div class="album-title">Lonesome Horizon</div>
+                <div class="album-service">Listen on Spotify</div>
+            </a>
+        </div>
+
+    </div>
+</section>
 
 </section>
       
