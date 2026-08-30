@@ -1,1 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon16.png">   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Randall Oelerich,composer,film,television,tv,scoring,Duluth,Minnesota,Saint Louis County,St Louis County">
+    <meta name="author" content="Randall Oelerich">
+    <meta name="description" content="Film Music Composer based in Duluth, MN. Original musical compositions for film and television media.">
+    <title>Film Music Composer - Randall Oelerich</title>
 
+    <style>
+
+    .soundcloud-frame {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background: #000000;
+}
+
+   .soundcloud-frame iframe {
+    display: block;
+    width: 100%;
+    height: 451px;
+    margin-top: -5px;
+    border: 0;
+}
+
+/* =====================================================
+   STICKY PAGE HEADER AND MENU
+   ===================================================== */
+
+   .site-header {
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+
+    margin: 0 -20px 30px;
+    padding: 20px 20px 13px;
+
+    background: rgba(10, 13, 15, 0);
+
+  /*  border-bottom: 1px solid rgba(255, 255, 255, 0.16); */
+
+  /*  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.30); */
+
+    /* Slightly blurs the page behind the header */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Covers the space above the sticky header */
+
+.site-header::before {
+    content: "";
+
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background: rgba(10, 13, 15, 0.88);
+
+    pointer-events: none;
+}
+
+.site-header h1 {
+    margin: 0 0 10px;
+    color: #c0c0c0;
+}
+
+.site-header .site-navigation {
+    margin: 0;
+}
+
+/* Menu text and links */
+
+.site-header p,
+.site-header a {
+    color: #c0c0c0;
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        top: 15px;
+        margin-right: -10px;
+        margin-left: -10px;
+        padding: 15px 10px 12px;
+    }
+
+   .site-header::before {
+        top: -15px;
+        height: 15px;
+    } 
+
+}
+        
+  /* Non-scrolling fixed background image */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/bg-dark.jpg");
+            background-size: cover;
+            background-position: top center; /* Ensures top of background shows */
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+
+        /* Semi-transparent overlay for soft darkening */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.45); /* Adjust opacity here */
+            z-index: -1;
+        }
+
+        body {
+            color: #dddddd;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background: transparent; /* prevents layered background conflict */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: #c0c0c0;
+        }
+
+        .quote {
+            opacity: 0.85;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .sc-wrapper {
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto;
+            text-align: center;
+            opacity: 0.95;
+        }
+
+        .sc-wrapper iframe {
+            width: 100%;
+            height: 450px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding-top: 56.25%;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .responsive-video iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            body {
+                font-size: 16px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            .sc-wrapper iframe {
+                height: 380px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Fixed background + overlay -->
+<div class="bg-image"></div>
+<div class="overlay"></div>
+
+
+<div class="container">
+
+    <header class="site-header">
+    <h1>Randall Oelerich</h1>
+ 
+     <p>
+            <a href="index.html">Home</a> | 
+            <a href="composer.html">Composer</a> | 
+            <b>Scoring</b> |
+            <a href="contact.html">Contact</a>
+    </p>
+    </header>
+
+    <div class="quote">
+        “Working with Randall was fantastic. He executed a great musical vision that elevated the final film
+        to a place I didn’t think it could go!” — 16FeetMedia, Connor Cieko (Director)
+    </div>
+
+    <p>
+        Randall Oelerich is a composer based in Duluth, Minnesota USA (Saint Louis County).
+        He writes both standalone music and cinematic-style compositions suited for film or television.
+        Below are examples of his work, including select compositions on SoundCloud. He also has music on
+        <a href="https://open.spotify.com/artist/1H3DfpMWqmr2a1IMunuH7I" target="_blank">Spotify</a>.
+        Randall is not associated with any of the scored commercial videos shown below, they are for 
+        practice scoring. If a video violates the Fair Use Copyright Act send a message and it will 
+        be removed from public viewing.
+    </p>
+
+   <!-- Movie Posters Collage -->
+      <!-- <div>
+        <p align="center">
+            <img src="images/collage1-posters.png" alt="collage showing scored films" width="50%" height="50%">
+        </p>
+      </div>
+    -->
+  
+</div>
+
+
+
+<!-- GPT code for Vimeo Videos as matrix with thumbnails -->
+
+<!-- =========================================================
+     VIMEO FILM SCORING GALLERY
+     Randall Oelerich
+     ========================================================= -->
+
+<style>
+
+    /* Entire Vimeo gallery */
+    .vimeo-gallery {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    /* Large player */
+    .main-video-container {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        margin-bottom: 12px;
+    }
+
+    .main-video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    /* Title underneath large player */
+    #main-video-title {
+        text-align: center;
+        font-size: 1.25rem;
+        margin: 12px 0 28px 0;
+    }
+
+    /* 3 x 4 video grid */
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    /* Individual thumbnail */
+    .video-card {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Thumbnail image wrapper */
+    .thumbnail-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: #222;
+    }
+
+    .thumbnail-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Play button over thumbnail */
+    .play-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 58px;
+        height: 58px;
+
+        background: rgba(0, 0, 0, 0.70);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: background 0.2s ease,
+                    transform 0.2s ease;
+    }
+
+    .play-icon::after {
+        content: "";
+        width: 0;
+        height: 0;
+
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 16px solid white;
+
+        margin-left: 4px;
+    }
+
+    .video-card:hover .play-icon {
+        background: rgba(0, 0, 0, 0.9);
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    /* Video title under thumbnail */
+    .thumbnail-title {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    /* Highlight currently selected video */
+    .video-card.active .thumbnail-wrapper {
+        outline: 3px solid #888;
+        outline-offset: 2px;
+    }
+
+
+    /* -----------------------------------------
+       TABLETS
+       ----------------------------------------- */
+
+    @media (max-width: 800px) {
+
+        .video-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+
+    /* -----------------------------------------
+       PHONES
+       ----------------------------------------- */
+
+    @media (max-width: 500px) {
+
+        .video-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .vimeo-gallery {
+            padding: 0 8px;
+        }
+
+    }
+
+</style>
+
+
+<div class="vimeo-gallery">
+
+    <!-- LARGE VIDEO PLAYER -->
+
+    <div class="main-video-container">
+
+        <iframe
+            id="main-vimeo-player"
+            src="https://player.vimeo.com/video/1219997526?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <div id="main-video-title">
+        Scored horror scene from the film Rings
+    </div>
+
+
+    <!--
+         The 12 thumbnails will automatically
+         be created here by JavaScript.
+    -->
+
+    <div class="video-grid" id="video-grid"></div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   YOUR 12 VIMEO VIDEOS
+   ========================================================= */
+
+const videos = [
+
+    {
+        id: "1219997526"
+    },
+
+    {
+        id: "1220000868"
+    },
+
+    {
+        id: "1036149042"
+    },
+
+    {
+        id: "578957111"
+    },
+
+    {
+        id: "953096480"
+    },
+
+    {
+        id: "1142220004"
+    },
+
+    {
+        id: "578616541"
+    },
+
+    {
+        id: "578224418"
+    },
+
+    {
+        id: "578224014"
+    },
+
+    {
+        id: "578141243"
+    },
+
+    {
+        id: "948772480"
+    },
+
+    {
+        id: "1221473920"
+    },
+
+    {
+        id: "578242385"
+    },
+
+    {
+        id: "578616041"
+    },
+
+    {
+        id: "68379243"
+    },
+
+    {
+        id: "68380806"
+    },
+
+    {
+        id: "578143193"
+    },
+
+    {
+        id: "1015822579"
+    }
+
+];
+
+
+
+/* =========================================================
+   CREATE THE THUMBNAIL GALLERY
+   ========================================================= */
+
+const grid = document.getElementById("video-grid");
+
+videos.forEach((video, index) => {
+
+    /*
+       Vimeo oEmbed supplies:
+
+       - video title
+       - thumbnail image
+       - other Vimeo metadata
+
+       No Vimeo API key is necessary.
+    */
+
+    const vimeoURL =
+        "https://vimeo.com/" + video.id;
+
+    const oEmbedURL =
+        "https://vimeo.com/api/oembed.json?url=" +
+        encodeURIComponent(vimeoURL) +
+        "&width=640";
+
+
+    fetch(oEmbedURL)
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "video-card";
+
+            card.dataset.videoId = video.id;
+
+
+            /* First video starts selected */
+
+            if (index === 0) {
+                card.classList.add("active");
+
+                document.getElementById(
+                    "main-video-title"
+                ).textContent = data.title;
+            }
+
+
+            /* Create thumbnail */
+
+            card.innerHTML = `
+
+                <div class="thumbnail-wrapper">
+
+                    <img
+                        src="${data.thumbnail_url}"
+                        alt="${escapeHTML(data.title)}"
+                        loading="lazy"
+                    >
+
+                    <div class="play-icon"></div>
+
+                </div>
+
+                <div class="thumbnail-title">
+                    ${escapeHTML(data.title)}
+                </div>
+
+            `;
+
+
+            /* Clicking thumbnail plays video */
+
+            card.addEventListener("click", () => {
+
+                playVideo(
+                    video.id,
+                    data.title,
+                    card
+                );
+
+            });
+
+
+            grid.appendChild(card);
+
+        })
+
+
+        .catch(error => {
+
+            /*
+               If Vimeo metadata cannot be retrieved,
+               still create a working video button.
+            */
+
+            console.log(
+                "Could not retrieve Vimeo metadata:",
+                video.id,
+                error
+            );
+
+
+            const card =
+                document.createElement("div");
+
+            card.className = "video-card";
+
+            card.innerHTML = `
+
+                <div class="thumbnail-wrapper">
+
+                    <div class="play-icon"></div>
+
+                </div>
+
+                <div class="thumbnail-title">
+                    Video ${index + 1}
+                </div>
+
+            `;
+
+
+            card.addEventListener("click", () => {
+
+                playVideo(
+                    video.id,
+                    "Video " + (index + 1),
+                    card
+                );
+
+            });
+
+
+            grid.appendChild(card);
+
+        });
+
+});
+
+
+
+/* =========================================================
+   LOAD SELECTED VIDEO INTO LARGE PLAYER
+   ========================================================= */
+
+function playVideo(videoID, title, card) {
+
+    const player =
+        document.getElementById("main-vimeo-player");
+
+
+    /*
+       autoplay=1 means clicking a thumbnail
+       immediately starts the selected video.
+    */
+
+    player.src =
+        "https://player.vimeo.com/video/" +
+        videoID +
+        "?autoplay=1&title=0&byline=0&portrait=0";
+
+
+    /* Change title */
+
+    document.getElementById(
+        "main-video-title"
+    ).textContent = title;
+
+
+    /* Remove previous highlight */
+
+    document.querySelectorAll(
+        ".video-card"
+    ).forEach(item => {
+
+        item.classList.remove("active");
+
+    });
+
+
+    /* Highlight selected video */
+
+    card.classList.add("active");
+
+
+    /*
+       Scroll smoothly back to the large
+       video player after clicking thumbnail.
+    */
+
+    document.querySelector(
+        ".main-video-container"
+    ).scrollIntoView({
+
+        behavior: "smooth",
+        block: "center"
+
+    });
+
+}
+
+
+
+/* =========================================================
+   PROTECT VIDEO TITLES USED IN HTML
+   ========================================================= */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+</script>    
+    
+    
+
+
+    
