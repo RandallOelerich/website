@@ -13,8 +13,7 @@
     <title>Randall Oelerich</title>
 
     <style>
-
-                
+        
     /* =====================================================
          ADD SHEET MUSIC IMAGE TO BACKGROUND
        ===================================================== */
@@ -32,65 +31,62 @@
     background-attachment: fixed;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
 
-    background-image: url("images/bg-sheetmusic.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;  /* adjust this number for larger/smaller music */
-    background-position: center top;
-
-    opacity: 0.20;                /* 30% visible */
+      background-image: url("images/bg-sheetmusic.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;  /* adjust this number for larger/smaller music */
+      background-position: center top;
+      opacity: 0.10;               
    } 
         
-body {
-    margin: 0;
-    min-height: 100vh;
-    position: relative;
-    isolation: isolate;
+   body {
+      margin: 0;
+      min-height: 100vh;
+      position: relative;
+      isolation: isolate;
 
-    /* Keep your existing background settings here */
-    background-image: url("images/bg-sheetmusic.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+      /* Keep your existing background settings here */
+      background-image: url("images/bg-sheetmusic.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+  body::before {
+     content: "";
+     position: fixed;
+     inset: 0;
+     z-index: -1;
+     pointer-events: none;
+
+     background-image: url("images/bg-sheetmusic.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;  /* adjust this number for larger/smaller music */
+     background-position: center top;
+     opacity: 0.10;    /* does this affect the rocks or the sheet music bg images? */
 }
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background-image: url("images/bg-sheetmusic.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;  /* adjust this number for larger/smaller music */
-    background-position: center top;
-    opacity: 0.10;    /* does this affect the rocks or the sheet music bg images? */
-}
-
+/* end section for sheet music background image */
 
         
 /* =====================================================
-           PAGE AND FADING BACKGROUND
+           PAGE AND FADING BACKGROUND FOR 
+           BRIGHTON BEACH BACKGROUND IMAGE
    ===================================================== */
 
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
-
             background-color: #000000;
-
             color: #c0c0c0;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-
             position: relative;
             isolation: isolate;
         }
@@ -102,20 +98,16 @@ body::before {
 
         body::before {
             content: "";
-
             position: fixed;
             inset: 0;
             z-index: -1;
-
-            background-image: url("images/bg-dark.jpg");
+            background-image: url("images/bg-dark.jpg");  /* brighton beach rocks */
             background-size: cover;
             background-position: top center;
             background-repeat: no-repeat;
-
-            opacity: 0.20;
+            opacity: 0.20;   /* opacity of bg-dark before fade in */
             animation: fadeInBackground 5s ease-in-out forwards; 
         }
-
       
         @keyframes fadeInBackground {
             from {
