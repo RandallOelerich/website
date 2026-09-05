@@ -12,50 +12,24 @@
           content="Randall Oelerich is a composer, artist, and writer based in Duluth, Minnesota.">
     <title>Randall Oelerich</title>
 
-    <style>
-        
-    /* =====================================================
-         ADD SHEET MUSIC IMAGE TO BACKGROUND
-       ===================================================== */
-        
-    body {
-    margin: 0;
-    min-height: 100vh;
-    position: relative;
-    isolation: isolate;
-
-    /* Keep your existing background settings here */
-    background-image: url("images/bg-sheetmusic.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-
-      background-image: url("images/bg-sheetmusic.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;  /* adjust this number for larger/smaller music */
-      background-position: center top;
-      opacity: 0.03;               
-   } 
-        
-   body {
+<style>
+           
+  body {
       margin: 0;
+      padding: 0;
       min-height: 100vh;
       position: relative;
       isolation: isolate;
-
-      /* Keep your existing background settings here */
-      background-image: url("images/bg-sheetmusic.jpg");
+      background-color: #000000;
+      color: #c0c0c0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-image: url("images/bg-dark.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      opacity: 0.20;   /* opacity of bg-dark before fade in */
+      animation: fadeInBackground 5s ease-in-out forwards; 
     }
 
   body::before {
@@ -64,52 +38,21 @@
      inset: 0;
      z-index: -1;
      pointer-events: none;
-
      background-image: url("images/bg-sheetmusic.jpg");
      background-repeat: no-repeat;
      background-size: cover;  /* adjust this number for larger/smaller music */
      background-position: center top;
-     opacity: 0.03;    /* does this affect the rocks or the sheet music bg images? */
-}
-/* end section for sheet music background image */
+     opacity: 0.05;    /* does this affect the rocks or the sheet music bg images? */
+  
+     }
 
-        
-/* =====================================================
-           PAGE AND FADING BACKGROUND FOR 
-           BRIGHTON BEACH BACKGROUND IMAGE
-   ===================================================== */
-
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background-color: #000000;
-            color: #c0c0c0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            position: relative;
-            isolation: isolate;
-        }
-
-        /*
-           The background image is placed on a separate layer.
-           This allows it to fade in without fading the page content.
-        */
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background-image: url("images/bg-dark.jpg");  /* brighton beach rocks */
-            background-size: cover;
-            background-position: top center;
-            background-repeat: no-repeat;
-            opacity: 0.20;   /* opacity of bg-dark before fade in */
-            animation: fadeInBackground 5s ease-in-out forwards; 
-        }
+     /*
+        The background image is placed on a separate layer.
+        This allows it to fade in without fading the page content.
+      */
+   
       
-        @keyframes fadeInBackground {
+     @keyframes fadeInBackground {
             from {
                 opacity: 0;
             }
@@ -117,7 +60,7 @@
             to {
                 opacity: 1;
             }
-        }
+      }
       
 
 
