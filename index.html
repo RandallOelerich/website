@@ -19,6 +19,66 @@
 
     <style>
 
+                
+        /* =====================================================
+           ADD SHEET MUSIC IMAGE TO BACKGROUND
+           ===================================================== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+
+    /* Keep your existing background settings here */
+    background-image: url("images/bg-sheetmusic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: url("images/bg-sheetmusic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  /* adjust this number for larger/smaller music */
+    background-position: center top;
+
+    opacity: 0.30;                /* 30% visible */
+}body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+
+    /* Keep your existing background settings here */
+    background-image: url("images/bg-sheetmusic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: url("images/bg-sheetmusic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  /* adjust this number for larger/smaller music */
+    background-position: center top;
+
+    opacity: 0.30;                /* 30% visible */
+}
+
+
+        
         /* =====================================================
            PAGE AND FADING BACKGROUND
            ===================================================== */
