@@ -43,6 +43,7 @@
      background-size: cover;  /* adjust this number for larger/smaller music */
      background-position: center top;
      opacity: 0.15;    /* does this affect the rocks or the sheet music bg images? */
+     animation: sheetMusicFade 10s ease-in-out forwards;
   
      }
 
@@ -61,7 +62,25 @@
                 opacity: 1;
             }
       }
-      
+
+
+    @keyframes sheetMusicFade {
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0.15;
+    }
+
+    65% {
+        opacity: 0.15;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
    /* =====================================================
            DARK OVERLAY
